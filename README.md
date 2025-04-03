@@ -23,13 +23,4 @@ The workflow consists of the following steps:
 
 ## Architecture Diagram
 
-```mermaid
-graph TD
-    A[Jira Intake Form] --> B(Jira Webhook);
-    B --> C[Azure Function];
-    C --> D[Azure DevOps Pipeline Trigger];
-    D --> E[Azure DevOps Pipeline];
-    E --> F[Azure Resource Manager (ARM) APIs];
-    F --> G[Azure Resources (VMs, Web Apps)];
-    G --> E;
-    E --> H[Pipeline Execution Result];
+
