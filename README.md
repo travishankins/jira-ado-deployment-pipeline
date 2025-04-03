@@ -1,6 +1,6 @@
-# Jira to Azure Classic (ASM) Deployment Pipeline
+# Jira to Azure Resource Manager (ARM) Deployment Pipeline
 
-This project automates the deployment of Azure Classic (ASM) resources (like VMs or web apps) based on information received from Jira intake forms. It utilizes Jira webhooks, Azure Functions, and Azure DevOps pipelines to achieve this.
+This project automates the deployment of Azure resources (like VMs, web apps, etc.) based on information received from Jira intake forms. It utilizes Jira webhooks, Azure Functions, and Azure DevOps pipelines to achieve this.
 
 ## Overview
 
@@ -15,7 +15,7 @@ The workflow consists of the following steps:
     * It triggers an Azure DevOps pipeline, passing the extracted data as pipeline parameters.
 4.  **Azure DevOps Pipeline Execution:**
     * The Azure DevOps pipeline receives the data parameters.
-    * It uses the Azure API (ASM) to interact with Azure and deploy the specified resources (VMs, web apps, etc.).
+    * It uses the Azure Resource Manager (ARM) APIs to interact with Azure and deploy the specified resources (VMs, web apps, etc.).
     * It uses a service connection to authenticate with Azure.
     * It reports the success or failure of the deployment.
 5.  **Deployment Result:**
@@ -29,7 +29,7 @@ graph TD
     B --> C[Azure Function];
     C --> D[Azure DevOps Pipeline Trigger];
     D --> E[Azure DevOps Pipeline];
-    E --> F[Azure API (AzAPI)];
-    F --> G[Azure  Resources (VMs, Web Apps)];
+    E --> F[Azure Resource Manager (ARM) APIs];
+    F --> G[Azure Resources (VMs, Web Apps)];
     G --> E;
     E --> H[Pipeline Execution Result];
