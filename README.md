@@ -22,5 +22,6 @@ The workflow consists of the following steps:
     * The pipeline's execution result is logged and can optionally be communicated back to Jira.
 
 ## Architecture Diagram
+![Architecture Diagram]([https://github.com/your-repo-link-here/A_flowchart_in_the_form_of_a_digital_vector_illust.png](https://github.com/travishankins/jira-ado-deployment-pipeline/blob/main/AzureFunction-Jira.png?raw=true))
 
 
